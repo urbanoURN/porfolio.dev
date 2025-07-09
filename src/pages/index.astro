@@ -1,0 +1,71 @@
+---
+import Badge from '../components/Badge.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Welcome from '../components/Welcome.astro';
+import Linkedin from '../components/icons/Linkedin.astro';
+import Github from '../components/icons/Github.astro';
+import Mail from '../components/icons/Mail.astro';
+import Layout from '../layouts/Layout.astro';
+import Socialrd from '../components/Socialrd.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import ExperienceItems from '../components/ExperienceItems.astro';
+import Briefcase from '../components/icons/Briefcase.astro';
+import Code from '../components/icons/Code.astro';
+
+---
+
+<Layout title="Porfolio de Edinson == Desarrollador y Programador WEB y Movile" description="contratame y trabajemos juntos">
+	<main class="px-5">
+		<!-- principal information -->
+		<SectionContainer class="py-44 pb32">
+
+			<img class="rounded-full size-20 " src="https://media.licdn.com/dms/image/v2/D4D03AQEqAbk1nOawqA/profile-displayphoto-crop_800_800/B4DZerFunFGUAI-/0/1750922095712?e=1757548800&v=beta&t=zXu3M5gKs1yCX3qJEfuLrs6K7i8ZcgCp2MAxoRDo6U0" alt="photo perfil">
+
+
+			<h1 class="text-white text-2xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">Hey, Soy Edinson<a href="https://www.linkedin.com/in/edinsondevurn/" target="_blank" rel="noopener" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a> </h1>
+
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px] ">
+				<span>1+ años de experiencia. </span><span class="text-yellow-200/90 ">Analisista, Desarrollo Web y Movil, </span><span class="text-red-100/90">Especializado en crear aplicaciones únicas </span>
+			</h2>
+
+			<nav class="flex gap-4 nt-10 mt-8 flex-wrap">
+				<Socialrd href="https://www.linkedin.com/in/edinsondevurn/">
+					<Linkedin class="size-4 md:size-6" /> LinkedIn
+				</Socialrd>
+
+				<Socialrd href="https://github.com/urbanoURN">
+					<Github class="size-4 md:size-6" /> GitHub
+				</Socialrd>
+
+				<Socialrd href="mailto:edinsondevurn@gmail.com">
+					<Mail class="size-4 d:size-6" /> edinsondevurn@gmail.com
+
+				</Socialrd>
+			</nav>	
+				
+		</SectionContainer>
+
+		<!-- experience -->
+		<SectionContainer id="experiencia" >
+			<h2 class="text-3xl font-semibold mb-6 mt-10 flex gap-x-2 items-center">
+				<Briefcase class="size-7"/>
+				Experiencia laboral
+			</h2>
+			<Experience />
+
+		</SectionContainer>
+
+		<!-- proyectos -->
+		<SectionContainer id="proyectos" >
+			<h2 class="text-3xl font-semibold mb-6 mt-10 flex gap-x-2 items-center">
+				<Code class="size-7"/>
+				Proyectos
+			</h2>
+			<Projects />
+
+		</SectionContainer>
+
+
+	</main>
+</Layout>

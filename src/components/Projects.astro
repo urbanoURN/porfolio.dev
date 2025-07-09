@@ -1,0 +1,55 @@
+---
+import  Python from "./icons/Python.astro";
+import  Django from "./icons/Django.astro"; 
+
+const TAGS = {
+    PYTHON: {
+        name: "Python",
+        class: "bg-white text-[#003159]",
+        icon: Python,
+            
+    },
+    DJANGO: {
+        name: "Django",
+        class: "bg-white text-[#003159]",
+        icon: Django,
+    }
+};
+
+const PROJECTS = [
+    {
+        title: "HANGAR",
+        description:
+            "Webb App para prestaciones e inventario de productos y servicios",
+        link: "https://github.com/urbanoURN/portafolio-dev",
+        github: "https://github.com/urbanoURN/portafolio-dev",
+        image: "/projects/svgh.jpg",
+        tags: [TAGS.PYTHON, TAGS.DJANGO],
+    },
+];
+---
+
+{
+    PROJECTS.map(({ title, description, tags, image }) => (
+        <article class="mb-10">
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row mb-2">
+                {tags.map((tag) => (
+                    <li> 
+                            
+                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} px-2 py-1`}>
+                            <tag.icon class="size-4"/>
+                            {tag.name}  
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img
+                class="rounded shadow-2xl shadow-white/10"
+                src={image}
+                alt={"IMG del proyecto ${image}"}
+            />
+        </article>
+    ))
+}

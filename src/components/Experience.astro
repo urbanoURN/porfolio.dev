@@ -1,0 +1,25 @@
+---
+import ExperienceItems from "./ExperienceItems.astro"
+
+const EXPERIENCES = [
+    {
+        title: "ERCO ENERGI | Desarrollo BackEnd",
+        description:
+            "Soporte y optimización de desarrollos existentes. Creación de plataforma interna para control de inventario. Implementación de sistema de firmas digitales. Automatización de procesos internos. Mantenimiento y seguridad del software corporativo",
+        date: "Octubre 2024 - Abril 2025",
+    }
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+
+    {
+        EXPERIENCES.map((experience) => (
+           <li class="mb-10 ms-4">
+                <ExperienceItems {...experience} />
+           </li>
+        ))
+    }
+
+
+</ol>
