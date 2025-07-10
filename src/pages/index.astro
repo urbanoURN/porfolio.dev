@@ -9,9 +9,13 @@ import Layout from '../layouts/Layout.astro';
 import Socialrd from '../components/Socialrd.astro';
 import Experience from '../components/Experience.astro';
 import Projects from '../components/Projects.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Contact from '../components/Contact.astro';
 import ExperienceItems from '../components/ExperienceItems.astro';
 import Briefcase from '../components/icons/Briefcase.astro';
 import Code from '../components/icons/Code.astro';
+import User from '../components/icons/User.astro';
+import ContactMe from '../components/icons/ContactMe.astro';
 
 ---
 
@@ -64,6 +68,26 @@ import Code from '../components/icons/Code.astro';
 			</h2>
 			<Projects />
 
+		</SectionContainer>
+
+		<!-- sobre mi -->
+		<SectionContainer id="sobre-mi" >
+			<h2 class="text-3xl font-semibold mb-6 mt-10 flex gap-x-2 items-center">
+				<User class="size-8"/>
+				Sobre mí
+			</h2>
+			
+			<AboutMe />
+		</SectionContainer>
+
+		<!--contacto -->
+		<SectionContainer id="contacto" >
+			<h2 class="text-3xl font-semibold mb-6 mt-10 flex gap-x-2 items-center">
+				<ContactMe class="size-8"/>
+				Contactame
+			</h2>
+			
+			<Contact />
 		</SectionContainer>
 
 
