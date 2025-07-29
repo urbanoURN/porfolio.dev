@@ -1,19 +1,23 @@
 ---
-import  Python from "./icons/Python.astro";
-import  Django from "./icons/Django.astro"; 
+import ProjectCard from '../components/ProjectCard.astro';
+import Python from "./icons/Python.astro";
+import Django from "./icons/Django.astro";
+import TypeScript from './icons/TypeScript.astro';
+import Ionic from './icons/Ionic.astro';
+import Angular from './icons/Angular.astro';
+import Scss from './icons/Scss.astro';
+import Html from './icons/Html.astro';
 
 const TAGS = {
-    PYTHON: {
-        name: "Python",
-        class: "bg-white text-[#003159]",
-        icon: Python,
-            
-    },
-    DJANGO: {
-        name: "Django",
-        class: "bg-white text-[#003159]",
-        icon: Django,
-    }
+  PYTHON: { name: "Python", class: "bg-white text-[#003159]", icon: Python },
+  DJANGO: { name: "Django", class: "bg-white text-[#003159]", icon: Django },
+  TYPESCRIPT: { name: "TypeScript", class: "bg-white text-[#003159]", icon: TypeScript },
+  IONIC: { name: "Ionic", class: "bg-white text-[#003159]", icon: Ionic },
+  ANGULAR: { name: "Angular", class: "bg-white text-[#003159]", icon: Angular },
+  SCSS: { name: "SCSS", class: "bg-white text-[#003159]", icon: Scss },
+  HTML: { name: "HTML", class: "bg-white text-[#003159]", icon: Html },
+
+
 };
 
 const PROJECTS = [
@@ -26,30 +30,19 @@ const PROJECTS = [
         image: "/projects/svgh.jpg",
         tags: [TAGS.PYTHON, TAGS.DJANGO],
     },
+
+    {
+        title: "EFECTO S.A.S",
+        description:
+            "Aplicación móvil desarrollada en Ionic para dispositivos Android, diseñada como una herramienta integral de inventario y gestión de ventas. La app cuenta con un sistema robusto de roles que distingue entre usuarios administradores y clientes. Los clientes pueden visualizar productos disponibles con imágenes y descripciones, seleccionar características como talla, color y cantidad, y realizar solicitudes personalizadas para abastecer sus negocios. Los administradores tienen acceso a un panel de gestión donde pueden revisar pedidos, administrar el inventario y realizar operaciones CRUD (crear, leer, actualizar, eliminar) sobre los productos y usuarios. EFECTO S.A.S facilita la organización del stock, mejora el proceso de venta y optimiza la comunicación entre vendedor y comprador.", 
+        link: "https://github.com/urbanoURN/portafolio-dev",        
+        github: "https://github.com/urbanoURN/portafolio-dev",        
+        image: "/projects/svgh.jpg",        
+        tags: [TAGS.IONIC, TAGS.PYTHON, TAGS.ANGULAR, TAGS.TYPESCRIPT, TAGS.HTML, TAGS.SCSS],   
+    }
 ];
 ---
 
-{
-    PROJECTS.map(({ title, description, tags, image }) => (
-        <article class="mb-10">
-            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-            <p class="text-lg mb-4 text-pretty">{description}</p>
-            <ul class="flex gap-x-2 flex-row mb-2">
-                {tags.map((tag) => (
-                    <li> 
-                            
-                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} px-2 py-1`}>
-                            <tag.icon class="size-4"/>
-                            {tag.name}  
-                        </span>
-                    </li>
-                ))}
-            </ul>
-            <img
-                class="rounded shadow-2xl shadow-white/10"
-                src={image}
-                alt={"IMG del proyecto ${image}"}
-            />
-        </article>
-    ))
-}
+{PROJECTS.map((proj, idx) => (
+  <ProjectCard key={idx} {...proj} index={idx} />
+))}

@@ -14,6 +14,10 @@ interface Props {
 }
 
 const { description, title } = Astro.props;
+
+
+
+
 ---
 
 
@@ -30,10 +34,67 @@ const { description, title } = Astro.props;
 
 	<body class="relative text-black dark:text-white">
 
-		<div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+		<!-- <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div> -->
+
+
+		<script>
+			// Lista de colores para alternar
+			const gradientColors = [
+				"#63e",     // púrpura eléctrico (corto para #6633ee)
+				"#78e",     // lavanda claro (corto para #7788ee)
+				"#7fffd4",  // aqua (verde-azulado)
+				"#00bfff",  // azul cielo intenso
+				"#00ffff",  // cian
+				"#8a2be2",  // azul violeta
+				"#6a5acd",  // azul pizarra
+				"#4682b4",  // azul acero
+				"#5f9ea0",  // verde cadete
+				"#3cb371",  // verde mar medio
+				"#20b2aa",  // verde aguamarina
+				"#32cd32",  // verde lima brillante
+				"#2e8b57",  // verde mar profundo
+				"#7b68ee",  // púrpura medio
+				"#9370db",  // púrpura claro
+				"#4b0082",  // índigo
+				"#483d8b",  // azul medianoche
+				"#00ced1",  // turquesa oscuro
+				"#40e0d0",  // turquesa
+				"#1e90ff",  // azul dodger
+				"#4169e1",  // azul real
+				"#ff00ff",  // magenta/fucsia
+				"#da70d6",  // orquídea
+				"#b0e0e6",  // azul polvo (muy suave)
+				"#66cdaa",  // verde medio aguamarina
+				"#00fa9a",  // verde primavera
+				"#adff2f",  // verde amarillento
+				"#c71585",  // rosa intenso púrpura
+				"#6b8e23",  // verde oliva apagado
+			];
+
+		  
+			// Seleccionamos el elemento de fondo
+			const background = document.getElementById("background-gradient");
+		  
+			// Recuperamos el índice anterior desde localStorage
+			let currentIndex = parseInt(localStorage.getItem("gradientIndex")) || 0;
+		  
+			// Avanzamos al siguiente color
+			currentIndex = (currentIndex + 1) % gradientColors.length;
+		  
+			// Aplicamos el nuevo fondo
+			const newColor = gradientColors[currentIndex];
+			background.style.background = `radial-gradient(125% 125% at 50% 50%, #000 30%, ${newColor} 100%)`;
+		  
+			// Guardamos el índice para la próxima carga
+			localStorage.setItem("gradientIndex", currentIndex);
+		  </script>
+		  
+
+
+		<div id="background-gradient" class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_50%,#000_30%,#63e_100%)]"></div>
+
 		
 		<Header />
-		
 		<slot />
 
 		<Footer />
