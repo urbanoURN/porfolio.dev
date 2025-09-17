@@ -8,7 +8,17 @@ import Angular from './icons/Angular.astro';
 import Scss from './icons/Scss.astro';
 import Html from './icons/Html.astro';
 import Jinja from './icons/Jinja.astro';
-
+import Budibase from './icons/Budibase.astro';
+import AWS from './icons/Aws.astro';
+import Zoho from './icons/Zoho.astro';
+import Castro from './icons/Castro.astro';
+import Tailwind from './icons/Tailwind.astro';
+import Postgresql from './icons/Postgresql.astro';
+import N8n from './icons/N8n.astro';
+import Mysql from './icons/Mysql.astro';
+import Css from './icons/Css.astro';
+import J4vascr1pt from './icons/J4vascr1pt.astro';
+import React from './icons/React.astro';
 
 const TAGS = {
   PYTHON: { name: "Python", class: "bg-white text-[#003159]", icon: Python },
@@ -19,19 +29,48 @@ const TAGS = {
   SCSS: { name: "SCSS", class: "bg-white text-[#003159]", icon: Scss },
   HTML: { name: "HTML", class: "bg-white text-[#003159]", icon: Html },
   JINJA: { name: "Jinja", class: "bg-white text-[#003159]", icon: Jinja },
+  BUDIBASE: { name: "Budibase", class: "bg-white text-[#003159]", icon: Budibase },
+  AWS : { name: "AWS Serverless", class: "bg-white text-[#003159]", icon: AWS },
+  ZOHO : { name: "Zoho Creator", class: "bg-white text-[#003159] ", icon: Zoho },
+  CASTRO : { name: "Astro", class: "bg-white text-[#003159] ", icon: Castro },
+  TAILWIND : { name: "TailwindCSS", class: "bg-white text-[#003159] ", icon: Tailwind },
+  POSTGRESQL : { name: "Postgresql", class: "bg-white text-[#003159] ", icon: Postgresql },
+  N8N : { name: "N8N", class: "bg-white text-[#003159] ", icon: N8n },
+  MYSQL : { name: "MySQL", class: "bg-white text-[#003159] ", icon: Mysql },
+  CSS : { name: "CSS", class: "bg-white text-[#003159] ", icon: Css },
+  JAVASCRIPT : { name: "JavaScript", class: "bg-white text-[#003159] ", icon: J4vascr1pt },
+  REACT : { name: "React", class: "bg-white text-[#003159] ", icon: React },
 
 
 };
 
 const PROJECTS = [
     {
+        title: "ERCO ENERGIA – Plataforma Interna",
+        description:
+        "Desarrollo Back-End de una plataforma interna para el control de inventario de equipos, automatización de procesos y gestión de firmas digitales con notificaciones automáticas. Incluyó optimización de código existente, integración de APIs y despliegue en la nube.",
+        link: "https://ercoenergia.com/", 
+        github: "https://github.com/urbanoURN/erco-energia",
+        image: "/projects/erco_neu.png",
+        tags: [TAGS.PYTHON, TAGS.DJANGO, TAGS.HTML, TAGS.BUDIBASE, TAGS.AWS, TAGS.ZOHO],
+    },
+    { 
+        title: "KENOVIX – Web App Corporativa",
+        description:
+        "Proyecto Full-Stack que optimizó procesos administrativos, técnicos y operativos de la empresa. Incluyó un sistema de tickets, módulo de cotizaciones automatizadas, automatización de nómina y despliegue en un servidor propio configurado desde cero.",
+        link: "https://kenovix.com/", 
+        github: "https://github.com/urbanoURN/kenovix",
+        image: "/projects/kenovix.JPG",
+        tags: [TAGS.PYTHON, TAGS.TYPESCRIPT, TAGS.REACT, TAGS.HTML, TAGS.JAVASCRIPT, TAGS.SCSS, TAGS.CASTRO, TAGS.TAILWIND, TAGS.N8N ],
+    },
+    {
         title: "HANGAR",
         description:
-            "Webb App para prestaciones e inventario de productos y servicios",
+            "Web App para la gestión de inventario, control de servicios y monitoreo de combustible en un hangar. Incluye autenticación de usuarios, generación de reportes y gráficos en tiempo real.",
         link: "https://github.com/urbanoURN/portafolio-dev",
         github: "https://github.com/urbanoURN/portafolio-dev",
         image: "/projects/svgh.jpg",
-        tags: [TAGS.PYTHON, TAGS.DJANGO, TAGS.JINJA],
+        tags: [TAGS.PYTHON, TAGS.DJANGO, TAGS.HTML, TAGS.JAVASCRIPT, TAGS.CSS, TAGS.SCSS, TAGS.JINJA, TAGS.MYSQL],
     },
 
     {
@@ -40,8 +79,26 @@ const PROJECTS = [
             "Aplicación móvil desarrollada en Ionic para dispositivos Android, diseñada como una herramienta integral de inventario y gestión de ventas. La app cuenta con un sistema robusto de roles que distingue entre usuarios administradores y clientes. Los clientes pueden visualizar productos disponibles con imágenes y descripciones, seleccionar características como talla, color y cantidad, y realizar solicitudes personalizadas para abastecer sus negocios. Los administradores tienen acceso a un panel de gestión donde pueden revisar pedidos, administrar el inventario y realizar operaciones CRUD (crear, leer, actualizar, eliminar) sobre los productos y usuarios. EFECTO S.A.S facilita la organización del stock, mejora el proceso de venta y optimiza la comunicación entre vendedor y comprador.", 
         link: "https://github.com/urbanoURN/portafolio-dev",        
         github: "https://github.com/urbanoURN/portafolio-dev",        
-        image: "/projects/svgh.jpg",        
-        tags: [TAGS.IONIC, TAGS.PYTHON, TAGS.ANGULAR, TAGS.TYPESCRIPT, TAGS.HTML, TAGS.SCSS],   
+        image: "/projects/efeecto.jpg",        
+        tags: [TAGS.IONIC, TAGS.PYTHON, TAGS.ANGULAR, TAGS.TYPESCRIPT, TAGS.HTML, TAGS.SCSS, TAGS.REACT, TAGS.MYSQL ],   
+    },
+    {
+        title: "ERCO Energy",
+        description:
+        "Plataforma web para la simulación, validación y clasificación de datos de generación energética de dispositivos solares. Incluye gestión de alertas, simulador en Python y base de datos avanzada en PostgreSQL.",
+        link: "https://github.com/urbanoURN/erco-energy",
+        github: "https://github.com/urbanoURN/erco-energy",
+        image: "/projects/psicotecnica_erco.jpg",
+        tags: [TAGS.PYTHON, TAGS.DJANGO, TAGS.HTML, TAGS.JAVASCRIPT, TAGS.CSS, TAGS.POSTGRESQL ],
+    },
+    {
+        title: "Portafolio Dev",
+        description:
+        "Sitio web personal desarrollado con Astro, TailwindCSS y componentes dinámicos. Incluye secciones de proyectos, experiencias, contacto y optimización para SEO.",
+        link: "https://urbanoURN.netlify.app/",
+        github: "https://github.com/urbanoURN/portafolio-dev",
+        image: "/projects/portafolio.jpg",
+        tags: [TAGS.CASTRO, TAGS.TAILWIND, TAGS.JAVASCRIPT, TAGS.REACT, TAGS.HTML, TAGS.CSS  ],
     }
 ];
 ---

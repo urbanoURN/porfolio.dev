@@ -17,15 +17,18 @@ import Code from '../components/icons/Code.astro';
 import User from '../components/icons/User.astro';
 import ContactMe from '../components/icons/ContactMe.astro';
 
+
+const personalImageAlt = "FT - Edinson Urbano"
+
+
 ---
 
 <Layout title="Porfolio de Edinson == Desarrollador y Programador WEB y Movile" description="contratame y trabajemos juntos">
-	<main class="px-50 pt-25">
+	<main class="px-[50px] pt-[25px]">
 		<!-- principal information -->
-		<SectionContainer class="py-44 pb32">
+		<SectionContainer class="py-44 pb-32">
 
-			<img class="rounded-full size-20 " src="https://media.licdn.com/dms/image/v2/D4D03AQEqAbk1nOawqA/profile-displayphoto-crop_800_800/B4DZerFunFGUAI-/0/1750922095712?e=1757548800&v=beta&t=zXu3M5gKs1yCX3qJEfuLrs6K7i8ZcgCp2MAxoRDo6U0" alt="photo perfil">
-
+			<img src="/projects/svgl.png" alt={personalImageAlt}  class="rounded-full size-25">
 
 			<h1 class="text-white text-2xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">Hey, Soy Edinson<a href="https://www.linkedin.com/in/edinsondevurn/" target="_blank" rel="noopener" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a> </h1>
 
@@ -41,11 +44,37 @@ import ContactMe from '../components/icons/ContactMe.astro';
 				<Socialrd href="https://github.com/urbanoURN">
 					<Github class="size-4 md:size-6" /> GitHub
 				</Socialrd>
-
-				<Socialrd href="mailto:edinsondevurn@gmail.com">
-					<Mail class="size-4 d:size-6" /> edinsondevurn@gmail.com
-
+				
+				<!-- Gmail -->
+				<Socialrd 
+					href="https://mail.google.com/mail/?view=cm&fs=1&to=edinsondevurn@gmail.com&su=Consulta&body=Hola+Edinson,+me+gustaría+hablar+contigo."
+					target="_blank"
+					rel="noopener noreferrer"
+					>
+					<Mail class="size-4 d:size-6" /> Gmail
 				</Socialrd>
+
+				<!-- Outlook -->
+				<Socialrd 
+					href="https://outlook.office.com/mail/deeplink/compose?to=edinsondevurn@gmail.com&subject=Consulta&body=Hola+Edinson,+me+gustaría+hablar+contigo."
+					target="_blank"
+					rel="noopener noreferrer"
+					>
+					<Mail class="size-4 d:size-6" /> Outlook
+				</Socialrd>
+
+				<!-- Mailto -->
+				<Socialrd 
+					href="mailto:edinsondevurn@gmail.com?subject=Consulta&body=Hola%20Edinson,%20me%20gustaría%20contactarte.">
+					<Mail class="size-4 d:size-6" /> edinsondevurn@gmail.com
+				</Socialrd>
+
+
+
+
+
+
+
 			</nav>	
 				
 		</SectionContainer>

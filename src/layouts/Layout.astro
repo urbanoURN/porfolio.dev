@@ -34,7 +34,6 @@ const { description, title } = Astro.props;
 
 	<body class="relative text-black dark:text-white">
 
-		<!-- <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div> -->
 
 
 		<script>
@@ -72,20 +71,20 @@ const { description, title } = Astro.props;
 			];
 
 		  
-			// Seleccionamos el elemento de fondo
+			
 			const background = document.getElementById("background-gradient");
 		  
-			// Recuperamos el índice anterior desde localStorage
+			
 			let currentIndex = parseInt(localStorage.getItem("gradientIndex")) || 0;
 		  
-			// Avanzamos al siguiente color
+		
 			currentIndex = (currentIndex + 1) % gradientColors.length;
 		  
-			// Aplicamos el nuevo fondo
+		
 			const newColor = gradientColors[currentIndex];
 			background.style.background = `radial-gradient(125% 125% at 50% 50%, #000 30%, ${newColor} 100%)`;
 		  
-			// Guardamos el índice para la próxima carga
+		
 			localStorage.setItem("gradientIndex", currentIndex);
 		  </script>
 		  
@@ -108,26 +107,77 @@ const { description, title } = Astro.props;
 
 <style is:global>
 
-	:root{
-		color-scheme: light dark; 
-	}
+:root {
+  color-scheme: light dark;
+}
 
-	html {
-		font-family: 'DM Sans',system-ui, sans-serif;
-		scroll-behavior: smooth;
-	}
+html {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
 
-	body{
-		background: #050505 ;
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-	
-	@media (prefers-reduced-motion: reduce) {
-		html {
-			scroll-behavior: auto;
-		}
-	}
+body {
+  background: #050505;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 70px;
+}
+
+
+main, slot {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+
+h1, h2, h3, p {
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+header, footer {
+  padding: 1rem;
+  text-align: center;
+}
+
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+  header, footer {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.85rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  main {
+    padding: 0.5rem;
+  }
+}
 
 </style>

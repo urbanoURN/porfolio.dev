@@ -2,24 +2,27 @@
 import ExperienceItems from "./ExperienceItems.astro"
 
 const EXPERIENCES = [
-    {
-        title: "ERCO ENERGI | Desarrollo BackEnd",
-        description:
-            "Brindé soporte a desarrollos existentes optimizando código y estructura; colaboré en el desarrollo de una nueva plataforma interna para el control de inventario de equipos; implementé un sistema de firmas digitales con notificaciones automáticas por correo; participé en la automatización de procesos internos y ayudé en la realización de funciones relacionadas con el mantenimiento del software interno de la empresa",
-        date: "Octubre 2024 - Abril 2025",
-    }
+  {
+    title: "KENOVIX S.A.S | Desarrollador Full-Stack",
+    description: `Lideré el ciclo completo de desarrollo de aplicaciones internas y externas, desde el análisis de requerimientos hasta el despliegue en un servidor propio. Desarrollé una web app corporativa con Astro, Python, TypeScript, Tailwind y PostgreSQL, que incluyó landing page, autenticación de usuarios, sistema de tickets y módulo de cotizaciones automatizadas. Implementé un sistema de nómina automatizado con reportes y comprobantes enviados por correo. Brindé soporte técnico integral (hardware, software y redes) a la infraestructura de la empresa y clientes externos, mejorando la disponibilidad y seguridad de los servicios.`,
+    date: "Julio 2025 – Septiembre 2025",
+    link: "http://www.kenovix.com/",
+  },
+  {
+    title: "ERCO ENERGÍA S.A.S | Desarrollador Back-End",
+    description: `Optimicé código y estructura de desarrollos existentes, mejorando la eficiencia del software interno. Colaboré en la construcción de una plataforma de control de inventario de equipos. Implementé un sistema de firmas digitales con notificaciones automáticas por correo. Diseñé y documenté APIs internas para integración de módulos y participé en la automatización de procesos internos, reduciendo tiempos operativos.`,
+    date: "Octubre 2024 – Abril 2025",
+    link: "https://erco.energy/co",
+  },
 ]
 ---
 
 <ol class="relative border-s border-gray-200 ml-3">
-
-    {
-        EXPERIENCES.map((experience) => (
-           <li class="mb-10 ms-4">
-                <ExperienceItems {...experience} />
-           </li>
-        ))
-    }
-
-
+  {
+    EXPERIENCES.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItems {...experience} />
+      </li>
+    ))
+  }
 </ol>
