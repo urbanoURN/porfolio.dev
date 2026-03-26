@@ -19,6 +19,8 @@ import Mysql from './icons/Mysql.astro';
 import Css from './icons/Css.astro';
 import J4vascr1pt from './icons/J4vascr1pt.astro';
 import React from './icons/React.astro';
+import Php from './icons/Php.astro';
+import Json from './icons/Json.astro';
 
 const TAGS = {
   PYTHON: { name: "Python", class: "bg-white text-[#003159]", icon: Python },
@@ -40,7 +42,8 @@ const TAGS = {
   CSS : { name: "CSS", class: "bg-white text-[#003159] ", icon: Css },
   JAVASCRIPT : { name: "JavaScript", class: "bg-white text-[#003159] ", icon: J4vascr1pt },
   REACT : { name: "React", class: "bg-white text-[#003159] ", icon: React },
-
+  PHP : { name: "PhP", class: "bg-white text-[#003159] ", icon: Php },
+  JSON : { name: "JSON", class: "bg-white text-[#003159] ", icon: Json },
 
 };
 
@@ -64,6 +67,24 @@ const PROJECTS = [
         tags: [TAGS.PYTHON, TAGS.TYPESCRIPT, TAGS.REACT, TAGS.HTML, TAGS.JAVASCRIPT, TAGS.SCSS, TAGS.CASTRO, TAGS.TAILWIND, TAGS.N8N ],
     },
     {
+        title: "Sistema de Coordinadores",
+        description:
+        "Sistema web completo de gestión electoral desarrollado en PHP, MySQL y Tailwind CSS, con autenticación de sesiones, protección CSRF y arquitectura MVC. Permite administrar coordinadores y ciudadanos con búsqueda en tiempo real, paginación dinámica, y eliminación con modales de confirmación. Incluye generación de reportes PDF profesionales con dompdf, portada estilizada, tablas con diseño corporativo y descarga asíncrona mediante Fetch API para una experiencia fluida sin recargas de página.",
+        link: "https://urbanoURN.netlify.app/",
+        github: "https://github.com/urbanoURN/portafolio-dev",
+        image: "/projects/votos.jpg",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.TAILWIND, TAGS.MYSQL, TAGS.PHP ],
+    },
+    {
+        title: "Modularis Employees",
+        description:
+        "Sistema de gestión de empleados desarrollado en TypeScript puro sin frameworks, aplicando arquitectura MVVM y principios SOLID. Consume una API REST externa para operaciones CRUD completas, con validaciones en tiempo real, manejo robusto de errores y transformación automática de datos. Implementa patrones de diseño como Observer, Strategy y Facade, junto con un diseño responsive Mobile-First, logrando una solución escalable, mantenible y orientada a buenas prácticas de ingeniería de software.",
+        link: "https://urbanoURN.netlify.app/",
+        github: "https://github.com/urbanoURN/portafolio-dev",
+        image: "/projects/modularis.jpg",
+        tags: [TAGS.HTML, TAGS.TYPESCRIPT, TAGS.CSS, TAGS.JSON ],
+    },
+    {
         title: "HANGAR",
         description:
             "Web App para la gestión de inventario, control de servicios y monitoreo de combustible en un hangar. Incluye autenticación de usuarios, generación de reportes y gráficos en tiempo real.",
@@ -83,9 +104,18 @@ const PROJECTS = [
         tags: [TAGS.IONIC, TAGS.PYTHON, TAGS.ANGULAR, TAGS.TYPESCRIPT, TAGS.HTML, TAGS.SCSS, TAGS.REACT, TAGS.MYSQL ],   
     },
     {
+        title: "System Nominas",
+        description:
+        "Sistema de gestión de nómina desarrollado en PHP y MySQL bajo arquitectura MVC, que permite administrar empleados y distintos tipos  de contratación, calcular salarios con auxilio de transporte, viáticos, bonificaciones y prestaciones sociales según la normativa colombiana. Incluye autenticación de usuarios, control de acceso y manejo seguro de la información. Genera comprobantes de nómina detallados y los envía automáticamente por correo electrónico mediante PHPMailer y SMTP. Su interfaz es moderna y responsive, diseñada para una operación eficiente y confiable en entornos empresariales.",
+        link: "https://urbanoURN.netlify.app/",
+        github: "https://github.com/urbanoURN/portafolio-dev",
+        image: "/projects/dashnomina.jpg",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.MYSQL, TAGS.PHP ],
+    },
+    {
         title: "ERCO Energy",
         description:
-        "Plataforma web para la simulación, validación y clasificación de datos de generación energética de dispositivos solares. Incluye gestión de alertas, simulador en Python y base de datos avanzada en PostgreSQL.",
+        "Plataforma web para la simulación, validación y clasificación de datos de generación energética de dispositivos solares. Incluye gestión de alertas, simulador en Python y base de  datos avanzada en PostgreSQL.",
         link: "https://github.com/urbanoURN/erco-energy",
         github: "https://github.com/urbanoURN/erco-energy",
         image: "/projects/psicotecnica_erco.jpg",
